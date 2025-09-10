@@ -1,10 +1,8 @@
 import { CreateUserDriverInput } from "../../../application/usecases/input/CreateUserDriverInput";
 import { Response } from "express";
 import { IController, IHttpRequest, IHttpNextFunction } from "../../../../../shared/types/http";
-import { injectable } from "tsyringe";
 import { RegisterUserUseCase } from "../../../application/usecases/RegisterUserUseCase";
 
-@injectable()
 export class RegisterUserController implements IController {
   path = "/users/register";
   method = "post";
